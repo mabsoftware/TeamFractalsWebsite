@@ -1,0 +1,20 @@
+{
+  "name": "stocks",
+  "version": "1.0.0",
+  "description": "A simple stock market simulator.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mabsoftware/stocks.git"
+  },
+  "author": "mabsoftware",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mabsoftware/stocks/issues"
+  },
+  "homepage": "https://github.com/mabsoftware/stocks#readme"
+}
