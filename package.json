@@ -1,7 +1,7 @@
 {
   "name": "stocks",
   "version": "1.0.0",
-  "description": "A simple stock market simulator.",
+  "description": "Team Fractals website.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
