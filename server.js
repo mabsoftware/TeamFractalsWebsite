@@ -13,7 +13,7 @@ var path = require('path');
 
 mongoose.connect(database.url); // connect to db
 
-// require('./config/passport')(passport);
+require('./config/passport')(passport);
 
 app.use(morgan('dev'));
 app.use(cookieParser());
