@@ -1,15 +1,16 @@
-var express  = require('express');
-var app      = express();
-var port     = process.env.PORT || 3000;
+var express = require('express');
+var app = express();
+var port = process.env.PORT || 3000;
 var mongoose = require('mongoose');
 var passport = require('passport');
-var flash    = require('connect-flash');
-var morgan       = require('morgan');
+var flash = require('connect-flash');
+var morgan = require('morgan');
 var cookieParser = require('cookie-parser');
-var bodyParser   = require('body-parser');
-var session      = require('express-session');
+var bodyParser = require('body-parser');
+var session = require('express-session');
 var database = require('./config/database.js');
 var path = require('path');
+var colors = require('colors');
 
 mongoose.connect(database.url); // connect to db
 
@@ -31,4 +32,4 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 require('./app/routes.js')(app, passport);
 
 app.listen(port, '0.0.0.0');
-console.log('Running on port ' + port + '.');
+console.log('Running on port ' + port + '.'.green);
