@@ -65,5 +65,3 @@ passport.use('local-login', new LocalStrategy({
         });
 
     }));
-
-};
