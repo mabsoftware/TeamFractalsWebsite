@@ -30,5 +30,5 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 
 require('./app/routes.js')(app, passport);
 
-app.listen(port);
+app.listen(port, '0.0.0.0');
 console.log('Running on port ' + port + '.');
