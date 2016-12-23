@@ -17,6 +17,10 @@ module.exports = function(app, passport) {
         res.render('login.ejs', { message: req.flash('loginMessage') });
     });
 
+    app.get('/news', function(req, res) {
+      res.render('news.ejs');
+    });
+
     // process the login form
     // app.post('/login', do all our passport stuff here);
 
