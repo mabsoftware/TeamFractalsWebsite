@@ -1,4 +1,4 @@
 angular.module("homeapp", [])
   .component("navigation",{
-      templateUrl: "http://teamfractals.com/js/templates/navigation.html",
+      templateUrl: "http://teamfractals.com:3000/js/templates/navigation.html",
   });
