@@ -64,4 +64,4 @@ passport.use('local-login', new LocalStrategy({
             return done(null, user);
         });
 
-    }));
+    });
