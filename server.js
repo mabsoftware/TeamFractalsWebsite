@@ -20,6 +20,9 @@ app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(bodyParser());
 app.use(express.static(path.join(__dirname, "public")));
+app.use(function(req, res) {
+     res.send('404: Page not Found', 404);
+  });
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
