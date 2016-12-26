@@ -20,9 +20,20 @@
     <navigation></navigation>
     <div class="container" style="overflow: auto">
     	<div id = "info" class="jumbotron text-center" style="overflow: auto">
-    		<h1><span></span>Team Fractals</h1>
         <br>
-        Here is the contact form.
+        <form action="/sendmail.php" method="post">
+            <div class="form-group">
+                <input type="text" class="form-control" name="name" placeholder="Your name...">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="contactEmail" placeholder="Your email...">
+            </div>
+            <div class="form-group">
+                <textarea rows="50" cols="5" placeholder="Type message here..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-default">Send</button>
+        </form>
       </div>
     <div class="footer">
       <p style="float: left; color: #CCCCCC"> &copy; Team Fractals, 2016 </p>
