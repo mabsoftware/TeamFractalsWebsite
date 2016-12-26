@@ -41,6 +41,10 @@ module.exports = function(app, passport) {
         req.logout();
         res.redirect('/');
     });
+
+    app.get('/sponsors', function(req, res) {
+      res.render('sponsors.ejs');
+    });
 };
 
 function isLoggedIn(req, res, next) {
