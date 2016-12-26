@@ -17,6 +17,10 @@ module.exports = function(app, passport) {
       res.render('news.ejs');
     });
 
+    app.get('/contact', function(req, res) {
+      res.render('contact.ejs');
+    });
+
     app.get('/signup', function(req, res) {
         res.render('signup.ejs', { message: req.flash('signupMessage') });
     });
