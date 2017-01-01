@@ -37,6 +37,21 @@ module.exports = function(app, passport) {
         });
     });
 
+    app.post('/profile', function(req, res) {
+      var Team = require('./models/team');
+      var newTeam = new Team();
+      newTeam.name = req.body.teamname;
+      newTeam.rank = req.body.rank;
+      newTeam.manualcapabilities = req.body.manualcapabilities;
+      newTeam.autonomouscapabilities = req.body.autonomouscapabilities;
+      newTeam.autonomousstrategy = req.body.autonomousstrategy;
+      newTeam.endgamestrategy = req.body.endgamestrategy;
+      newTeam.save(function(err) {
+        if (err) throw err;
+        return done(null, newUser);
+      });
+    });
+
     app.get('/logout', function(req, res) {
         req.logout();
         res.redirect('/');
