@@ -48,7 +48,6 @@ module.exports = function(app, passport) {
       newTeam.endgamestrategy = req.body.endgamestrategy;
       newTeam.save(function(err) {
         if (err) throw err;
-        return done(null, newUser);
       });
     });
 
