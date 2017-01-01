@@ -33,6 +33,31 @@
                       <p>Please record information on other teams below.</p>
                       <div class="well" ng-app="teamApp">
                         <button name="see">See teams</button>
+                        <!-- Add teams -->
+                        <form action="/profile" method="post">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="teamname" placeholder="Team name...">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="rank" placeholder="Team rank...">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="manualcapabilities" rows="10" class="form-control" placeholder="Manual capabilities..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="autonomouscapabilities" rows="10" class="form-control" placeholder="Autonomous capabilities..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="autonomousstrategy" rows="10" class="form-control" placeholder="Autonomous Strategy(s)..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="endgamestrategy" rows="10" class="form-control" placeholder="End game strategies..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="avg" placeholder="Average points scored...">
+                            </div>
+                            <button type="submit" class="btn btn-default">Send</button>
+                        </form>
                       </div>
                     <% } %>
                 </div>
