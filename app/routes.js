@@ -33,11 +33,13 @@ module.exports = function(app, passport) {
 
     app.get('/profile', isLoggedIn, function(req, res) {
       var Team = require('./models/team');
+      var t = Team.find({}, function(err, teams) {
+        if (err) throw err;
+        t.data = teams;
+      });
       res.render('profile.ejs', {
           user : req.user, // get the user out of session and pass to template
-          teams: Team.find({}, function(err, teams) {
-            if (err) throw err;
-          }).teams,
+          teams: t.data,
         });
     });
 
