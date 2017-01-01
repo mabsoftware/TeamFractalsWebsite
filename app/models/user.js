@@ -7,7 +7,7 @@ var userSchema = mongoose.Schema({
         email        : String,
         password     : String,
     },
-
+    isScout: Boolean,
 });
 
 userSchema.methods.generateHash = function(password) {
