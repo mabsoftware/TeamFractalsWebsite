@@ -32,9 +32,14 @@
                       <p>Welcome, Team Fractals scout.</p>
                       <p>Please record information on other teams below.</p>
                       <div class="well" ng-app="teamApp">
-                        <button name="see">See teams</button>
+                        <button name="see" ng-click="teamOpen = !teamOpen">See teams</button>
                         <button name="show" ng-click="formOpen = !formOpen">Add team</button>
+                        <!-- Show teams -->
+                        <div ng-init="teamOpen = false" ng-show="teamOpen" id="showteams">
+                          <p>List of team information from our database:</p>
+                        </div>
                         <!-- Add teams -->
+                        <br><br>
                         <form ng-init="formOpen = false" ng-show="formOpen" action="/profile" method="post">
                             <div class="form-group">
                                 <input type="text" class="form-control" name="teamname" placeholder="Team name...">
