@@ -24,14 +24,16 @@
         </div>
 
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-12">
                 <div class="well">
                     <h3><span class="fa fa-user"></span> Hi <%=user.local.email %>.</h3>
                     <% if (user.isScout) { %>
                       <!-- Load AngularJS app for scout. -->
                       <p>Welcome, Team Fractals scout.</p>
                       <p>Please record information on other teams below.</p>
-
+                      <div class="well" ng-app="teamApp">
+                        <button name="see">See teams</button>
+                      </div>
                     <% } %>
                 </div>
             </div>
