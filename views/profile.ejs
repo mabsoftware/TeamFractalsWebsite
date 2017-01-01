@@ -37,11 +37,11 @@
                         <!-- Show teams -->
                         <div ng-init="teamOpen = false" ng-show="teamOpen" id="showteams">
                           <p>List of team information from our database:</p>
-                          <% teams.forEach(function(teams){ %>
-                            <% teams.forEach(function(team){ %>
-                              <%=team %>
+                          <ul>
+                            <% teams[0].forEach(function(team){ %>
+                              <li><%=team %></li>
                             <% }); %>
-                          <% }); %>
+                          </ul>
                         </div>
                         <!-- Add teams -->
                         <br><br>
