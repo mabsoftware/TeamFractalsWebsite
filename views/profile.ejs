@@ -38,9 +38,9 @@
                         <div ng-init="teamOpen = false" ng-show="teamOpen" id="showteams">
                           <p>List of team information from our database:</p>
                           <ul>
-                            <% for (var teamList in teams) { %>
-                              <% for (var team in teamList) %>
-                                <li><%=team %></li>
+                            <% for (var i = 0; i < teams.length; i++) { %>
+                              <% for (var z = 0; z < teams[i].length; z++;) %>
+                                <li><%=teams[i][z] %></li>
                               <% } %>
                             <% } %>
                           </ul>
