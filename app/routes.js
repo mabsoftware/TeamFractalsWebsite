@@ -37,7 +37,7 @@ module.exports = function(app, passport) {
         if (err) throw err;
         res.render('profile.ejs', {
             user : req.user, // get the user out of session and pass to template
-            teams: teams,
+            teams: {teams},
           });
       });
     });
