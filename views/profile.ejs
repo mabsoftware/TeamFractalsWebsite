@@ -33,8 +33,9 @@
                       <p>Please record information on other teams below.</p>
                       <div class="well" ng-app="teamApp">
                         <button name="see">See teams</button>
+                        <button name="show" ng-click="formOpen = !formOpen">Add team</button>
                         <!-- Add teams -->
-                        <form action="/profile" method="post">
+                        <form ng-init="formOpen = false" ng-show="formOpen" action="/profile" method="post">
                             <div class="form-group">
                                 <input type="text" class="form-control" name="teamname" placeholder="Team name...">
                             </div>
