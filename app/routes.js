@@ -35,13 +35,11 @@ module.exports = function(app, passport) {
       var Team = require('./models/team');
       var t = Team.find({}, function(err, teams) {
         if (err) throw err;
-        t.data = teams;
+        res.render('profile.ejs', {
+            user : req.user, // get the user out of session and pass to template
+            teams: teams,
+          });
       });
-      console.log(t.data);
-      res.render('profile.ejs', {
-          user : req.user, // get the user out of session and pass to template
-          teams: t.data,
-        });
     });
 
     app.post('/profile', function(req, res) {
