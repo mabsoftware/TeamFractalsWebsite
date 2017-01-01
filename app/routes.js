@@ -50,7 +50,9 @@ module.exports = function(app, passport) {
       newTeam.save(function(err) {
         if (err) throw err;
       });
-      res.render('profile.ejs');
+      res.render('profile.ejs', {
+        user: req.user
+      });
     });
 
     app.get('/logout', function(req, res) {
