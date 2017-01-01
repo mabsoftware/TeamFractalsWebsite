@@ -38,9 +38,11 @@
                         <div ng-init="teamOpen = false" ng-show="teamOpen" id="showteams">
                           <p>List of team information from our database:</p>
                           <ul>
-                            <% teams[0].forEach(function(team){ %>
-                              <li><%=team %></li>
-                            <% }); %>
+                            <% for teamList in teams { %>
+                              <% for team in teamList %>
+                                <li><%=team %></li>
+                              <% } %>
+                            <% } %>
                           </ul>
                         </div>
                         <!-- Add teams -->
