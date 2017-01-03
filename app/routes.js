@@ -17,6 +17,10 @@ module.exports = function(app, passport) {
       res.render('news.ejs');
     });
 
+    app.get('/photo', function(req, res) {
+      res.render('photo.ejs');
+    });
+
     app.get('/contact', function(req, res) {
       res.render('contact.ejs');
     });

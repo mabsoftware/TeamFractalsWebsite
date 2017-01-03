@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Team Fractals Website</title>
+    <meta name="Description" content="FIRST FTC Team 12144 (Team Fractals) Homepage.">
+    <meta name="Keywords" content="FIRST, FTC, Team 12144, Robotics, Fractals">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script
+			  src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+			  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+			  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <script src="js/three.min.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  <body ng-app="homeapp">
+    <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+    <navigation></navigation>
+    <div class="container" style="overflow: auto">
+    	<div id = "info" class="jumbotron text-center" style="overflow: auto">
+    		<h1><span></span>Photo Gallery</h1>
+        <br>
+        <div class="col-md-6" style="text-align: left;">
+          Welcome to the Team Fractals photo gallery! Here you will find
+          pictures of our robot, workshop (or living room, perhaps?), as well
+          as pictures of the team at work. Enjoy!
+          <br>
+          <img src="assets/robot.jpg"></img>
+          <img src="assets/program.jpg"></img>
+          <img src="assets/sev.jpg"></img>
+          <video width="320" height="240" controls>
+            <source src="assets/beaconvideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <img class="col-md-6" src="assets/firstlogo.png"></img>
+        <div style="padding: 30px;" class="fb-like" data-href="https://facebook.com/TeamFractals" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+      </div>
+    <div class="footer">
+      <p style="float: left; color: #CCCCCC"> &copy; Team Fractals, 2016 </p>
+    </div>
+    </div>
+  </body>
+</html>
