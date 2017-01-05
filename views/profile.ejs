@@ -40,7 +40,16 @@
                           <p>(Note: UI will improve.).
                           <ul>
                           <% for (var i = 0; i < teams.length; i++) { %>
-                            <li><%= teams[i]['name'] %></li>
+                            <li>
+                              <div class = "well">
+                                <h4><%= teams[i]['name'] %></h4>
+                                <p>Rank: <%= teams[i]['rank']%></p>
+                                <p>Manual Capabilities: <%= teams[i]['manualcapabilities'] %></p>
+                                <p>Autonomous Capabilities: <%= teams[i]['autonomouscapabilities'] %></p>
+                                <p>Autonomous Strategy: <%= teams[i]['autonomousstrategy'] %></p>
+                                <p>End Game Strategy: <%= teams[i]['endgamestrategy'] %></p>
+                              </div>
+                            </li>
                           <% } %>
                           </ul>
                         </div>
