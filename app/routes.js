@@ -55,13 +55,12 @@ module.exports = function(app, passport) {
       newTeam.autonomouscapabilities = req.body.autonomouscapabilities;
       newTeam.autonomousstrategy = req.body.autonomousstrategy;
       newTeam.endgamestrategy = req.body.endgamestrategy;
-      console.log(newTeam);
       newTeam.save(function(err) {
         if (err) throw err;
       });
       res.render('profile.ejs', {
         user: req.user,
-        teams: req.teams
+        teams: teams
       });
     });
 
