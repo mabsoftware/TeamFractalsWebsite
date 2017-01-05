@@ -39,7 +39,9 @@
                           <p>List of team information from our database:</p>
                           <p>(Note: UI will improve.).
                           <ul>
-                            <li><%= teams[0] %></li>
+                          <% for (var i = 0; i < teams.length; i++) { %>
+                            <li><%= teams[i] %></li>
+                          <% } %>
                           </ul>
                         </div>
                         <!-- Add teams -->
