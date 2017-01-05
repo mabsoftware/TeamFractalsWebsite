@@ -26,29 +26,27 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="well">
-                    <h3><span class="fa fa-user"></span> Hi <%=user.local.email %>.</h3>
-                    <% if (user.isScout) { %>
-                      <!-- Load AngularJS app for scout. -->
-                      <p>Welcome, Team Fractals scout.</p>
-                      <p>Please record information on other teams below.</p>
-                      <div class="well" ng-app="teamApp">
-                        <button name="see" ng-click="teamOpen = !teamOpen">See teams</button>
-                        <button name="show" ng-click="formOpen = !formOpen">Add team</button>
-                        <!-- Show teams -->
-                        <div ng-init="teamOpen = false" ng-show="teamOpen" id="showteams">
-                          <br>
-                          <p>List of team information from our database:</p>
-                          <% for (var i = 0; i < teams.length; i++) { %>
-                              <div class = "well">
-                                <h4><%= teams[i]['name'] %></h4>
-                                <p>Rank: <%= teams[i]['rank']%></p>
-                                <p>Manual Capabilities: <%= teams[i]['manualcapabilities'] %></p>
-                                <p>Autonomous Capabilities: <%= teams[i]['autonomouscapabilities'] %></p>
-                                <p>Autonomous Strategy: <%= teams[i]['autonomousstrategy'] %></p>
-                                <p>End Game Strategy: <%= teams[i]['endgamestrategy'] %></p>
-                              </div>
-                          <% } %>
-                        </div>
+                  <h3><span class="fa fa-user"></span> Hi <%=user.local.email %>.</h3>
+                  <% if (user.isScout) { %>
+                    <!-- Load AngularJS app for scout. -->
+                    <p>Welcome, Team Fractals scout.</p>
+                    <p>Please record information on other teams below.</p>
+                      <button name="see" ng-click="teamOpen = !teamOpen">See teams</button>
+                      <button name="show" ng-click="formOpen = !formOpen">Add team</button>
+                      <!-- Show teams -->
+                      <div ng-init="teamOpen = false" ng-show="teamOpen" id="showteams">
+                        <br>
+                        <p>List of team information from our database:</p>
+                        <% for (var i = 0; i < teams.length; i++) { %>
+                            <div class = "well">
+                              <h4><%= teams[i]['name'] %></h4>
+                              <p>Rank: <%= teams[i]['rank']%></p>
+                              <p>Manual Capabilities: <%= teams[i]['manualcapabilities'] %></p>
+                              <p>Autonomous Capabilities: <%= teams[i]['autonomouscapabilities'] %></p>
+                              <p>Autonomous Strategy: <%= teams[i]['autonomousstrategy'] %></p>
+                              <p>End Game Strategy: <%= teams[i]['endgamestrategy'] %></p>
+                            </div>
+                        <% } %>
                         <!-- Add teams -->
                         <br><br>
                         <form ng-init="formOpen = false" ng-show="formOpen" action="/profile" method="post">
