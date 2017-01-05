@@ -36,11 +36,9 @@
                         <button name="show" ng-click="formOpen = !formOpen">Add team</button>
                         <!-- Show teams -->
                         <div ng-init="teamOpen = false" ng-show="teamOpen" id="showteams">
+                          <br>
                           <p>List of team information from our database:</p>
-                          <p>(Note: UI will improve.).
-                          <ul>
                           <% for (var i = 0; i < teams.length; i++) { %>
-                            <li>
                               <div class = "well">
                                 <h4><%= teams[i]['name'] %></h4>
                                 <p>Rank: <%= teams[i]['rank']%></p>
@@ -49,9 +47,7 @@
                                 <p>Autonomous Strategy: <%= teams[i]['autonomousstrategy'] %></p>
                                 <p>End Game Strategy: <%= teams[i]['endgamestrategy'] %></p>
                               </div>
-                            </li>
                           <% } %>
-                          </ul>
                         </div>
                         <!-- Add teams -->
                         <br><br>
