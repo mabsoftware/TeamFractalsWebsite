@@ -41,7 +41,7 @@ module.exports = function(app, passport) {
         if (err) throw err;
         res.render('profile.ejs', {
             user : req.user, // get the user out of session and pass to template
-            teams: req.body.teams
+            teams: teams
           });
       });
     });
@@ -60,7 +60,7 @@ module.exports = function(app, passport) {
       });
       res.render('profile.ejs', {
         user: req.user,
-        teams: teams
+        teams: req.body.teams
       });
     });
 
