@@ -67,7 +67,7 @@
                         </form>
                       </div>
                     <% } %>
-                    <% else { %>
+                    <% if (!user.isScout) { %>
                       <p>Welcome to your Team Fractals dashboard <%= user.local.email %>.
                         Here you will receive updates on Team Fractals activity as well as
                         an occasional poll.
