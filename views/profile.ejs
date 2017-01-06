@@ -67,6 +67,14 @@
                         </form>
                       </div>
                     <% } %>
+                    <% else { %>
+                      <p>Welcome to your Team Fractals dashboard <%= user.local.email %>.
+                        Here you will receive updates on Team Fractals activity as well as
+                        an occasional poll.
+                      </p>
+                      <p>Note: This part of the website is currently under construction. Updates
+                        and polls will be possible by February 15th of 2017.</p>
+                    <% } %>
                 </div>
             </div>
             <% include ./partials/footer %>
