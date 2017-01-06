@@ -1,6 +1,6 @@
 {
-  "name": "stocks",
-  "version": "1.0.0",
+  "name": "teamfractalswebsite",
+  "version": "2.0.0",
   "description": "Team Fractals website.",
   "main": "server.js",
   "scripts": {
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mabsoftware/stocks.git"
+    "url": "git+https://github.com/mabsoftware/TeamFractalsWebsite.git"
   },
   "author": "mabsoftware",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mabsoftware/stocks/issues"
+    "url": "https://github.com/mabsoftware/TeamFractalsWebsite/issues"
   },
-  "homepage": "https://github.com/mabsoftware/stocks#readme",
+  "homepage": "https://github.com/mabsoftware/TeamFractalsWebsite#readme",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.2",
