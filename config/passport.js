@@ -33,7 +33,7 @@ module.exports = function(passport) {
                 newUser.local.email = email;
                 newUser.local.password = newUser.generateHash(password);
                 newUser.isScout = false; // people who are signing up aren't our team scout.
-                newUser.isAdmin = true;
+                newUser.isAdmin = false;
                 // team scout will be created through the mongo shell.
 
                 newUser.save(function(err) {
