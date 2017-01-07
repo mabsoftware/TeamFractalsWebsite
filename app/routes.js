@@ -1,4 +1,7 @@
 module.exports = function(app, passport) {
+    var Contact = require('./models/contact');
+    var Team = require('./models/team');
+
     app.get('/', function(req, res) {
         res.render('index.ejs'); // load the index.ejs file
     });
@@ -26,7 +29,6 @@ module.exports = function(app, passport) {
     });
 
     app.post('/contact', function(req, res) {
-      var Contact = require('./models/contact');
       var newMail = new Contact();
       newMail.from = req.body.name;
       newMail.subject = req.body.contactEmail;
@@ -49,8 +51,6 @@ module.exports = function(app, passport) {
     }));
 
     app.get('/profile', isLoggedIn, function(req, res) {
-      var Team = require('./models/team');
-      var Contact = require('./models/contact');
       Team.find({}, function(err, teams) {
         if (err) throw err;
         Contact.find({}, function(err, contacts) {
@@ -64,7 +64,6 @@ module.exports = function(app, passport) {
     });
 
     app.post('/profile', function(req, res) {
-      var Team = require('./models/team');
       var newTeam = new Team();
       newTeam.name = req.body.teamname;
       newTeam.rank = req.body.rank;
@@ -75,8 +74,7 @@ module.exports = function(app, passport) {
       newTeam.save(function(err) {
         if (err) throw err;
       });
-      var Team = require('./models/team');
-      var t = Team.find({}, function(err, teams) {
+      Team.find({}, function(err, teams) {
         if (err) throw err;
         res.render('profile.ejs', {
             user : req.user, // get the user out of session and pass to template
