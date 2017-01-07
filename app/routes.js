@@ -31,6 +31,7 @@ module.exports = function(app, passport) {
       newMail.from = req.body.name;
       newMail.subject = req.body.contactEmail;
       newMail.message = req.body.body;
+      console.log(newMail.from + ", " + newMail.subject + ", " + newMail.message);
       newMail.save(function(err) {
         if (err) throw err;
       });
