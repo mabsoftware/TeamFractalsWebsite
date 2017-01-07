@@ -82,9 +82,9 @@
                         <ul>
                         <% for (var i = 0; i < contacts.length; i++) { %>
                           <li>
-                            From: <p><%= contacts[i]["from"] %></p>
-                            Subject: <p><%= contacts[i]["subject"] %></p>
-                            Message: <p><%= contacts[i]["message"] %></p>
+                            <p><strong>From: </strong><%= contacts[i]["from"] %></p>
+                            <p><strong>Subject: </strong><%= contacts[i]["subject"] %></p>
+                            <p><strong>Message: </strong><%= contacts[i]["message"] %></p>
                           </li>
                           <button name="remove">Delete</button>
                         <% } %>
