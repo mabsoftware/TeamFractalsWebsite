@@ -17,12 +17,23 @@ module.exports = function(app, passport) {
       res.render('news.ejs');
     });
 
-    app.get('/photo', function(req, res) {
-      res.render('photo.ejs');
+    app.get('/services', function(req, res) {
+      res.render('services.ejs');
     });
 
     app.get('/contact', function(req, res) {
       res.render('contact.ejs');
+    });
+
+    app.post('/contact', function(req, res) {
+      var Contact = require('./models/contact');
+      var newMail = new Contact();
+      newMail.from = req.body.name;
+      newMail.subject = req.body.contactEmail;
+      newMail.message = req.body.body;
+      Contact.save(function(err) {
+        if (err) throw err;
+      });
     });
 
     app.get('/signup', function(req, res) {
