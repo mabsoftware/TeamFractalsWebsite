@@ -50,12 +50,16 @@ module.exports = function(app, passport) {
 
     app.get('/profile', isLoggedIn, function(req, res) {
       var Team = require('./models/team');
-      var t = Team.find({}, function(err, teams) {
+      var Contact = require('./models/contact');
+      Team.find({}, function(err, teams) {
         if (err) throw err;
-        res.render('profile.ejs', {
-            user : req.user, // get the user out of session and pass to template
-            teams: teams
-          });
+        Contact.find({}, function(err, contacts) {
+          res.render('profile.ejs', {
+              user : req.user, // get the user out of session and pass to template
+              teams: teams,
+              contacts: contacts
+            });
+        });
       });
     });
 
