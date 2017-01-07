@@ -81,7 +81,12 @@
                         <h3>Fan Mail</h3>
                         <ul>
                         <% for (var i = 0; i < contacts.length; i++) { %>
-                          <li><%= contacts[i] %></li>
+                          <li>
+                            From: <p><%= contacts[i]["from"] %></p>
+                            Subject: <p><%= contacts[i]["subject"] %></p>
+                            Message: <p><%= contacts[i]["message"] %></p>
+                          </li>
+                          <button name="remove">Delete</button>
                         <% } %>
                         </ul>
                       </div>
