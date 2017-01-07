@@ -31,7 +31,7 @@ module.exports = function(app, passport) {
       newMail.from = req.body.name;
       newMail.subject = req.body.contactEmail;
       newMail.message = req.body.body;
-      Contact.save(function(err) {
+      newMail.save(function(err) {
         if (err) throw err;
       });
     });
