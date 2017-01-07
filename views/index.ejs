@@ -1,5 +1,14 @@
 <html>
-  <head><% include ./partials/head %></head>
+  <head>
+    <% include ./partials/head %>
+    <script>
+      $(document).ready(function() {
+        $('#slideshow').cycle({
+		        fx: 'fade'
+      });
+    });
+    </script>
+  </head>
   <body>
     <% include ./partials/facebook %>
     <% include ./partials/nav %>
@@ -16,7 +25,13 @@
           <br>Sincerely, Team Fractals.
           <br><br>
         </div>
-        <img class="col-md-6" src="assets/teamshot.jpeg"></img>
+        <div class="slideshow">
+      		<img src="assets/teamshot.jpeg" width="400" height="300" />
+      		<img src="assets/sev.jpg" width="400" height="300" />
+      		<img src="assets/robot.jpg" width="400" height="300" />
+      		<img src="assets/program.jpg" width="400" height="300" />
+      		<img src="assets/firstlogo.png" width="400" height="300" />
+      	</div>
         <div style="padding: 30px;" class="fb-like" data-href="https://facebook.com/TeamFractals" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
       </div>
     <% include ./partials/footer %>
