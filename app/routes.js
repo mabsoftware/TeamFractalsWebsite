@@ -35,6 +35,7 @@ module.exports = function(app, passport) {
       newMail.save(function(err) {
         if (err) throw err;
       });
+      res.redirect("/");
     });
 
     app.get('/signup', function(req, res) {
