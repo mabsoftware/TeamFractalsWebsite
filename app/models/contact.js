@@ -6,4 +6,4 @@ var contactSchema = mongoose.Schema({
     message: String
 });
 
-module.exports = mongoose.model('Contact', contactSchema);
+module.exports = mongoose.model('contact', contactSchema);
