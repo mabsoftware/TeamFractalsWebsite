@@ -21,6 +21,17 @@
           <li>Conclusion</li>
         </ol>
         <h3>Comments</h3>
+        <ul>
+          <% for (var i = 0; i < comments.length; i++) { %>
+            <% if (comments[i]["isApproved"]) { %>
+              <li>
+                <%= comments[i]["name"] %>
+                <%= comments[i]["subject"] %>
+                <%= comments[i]["message"] %>
+              </li>
+            <% } %>
+          <% } %>
+        </ul>
         <div ng-app>
           <button style="font-size: 12px;" ng-click="addComment = !addComment">Write Comment</button>
           <div ng-init="addComment = false" ng-show="addComment">

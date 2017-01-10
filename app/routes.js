@@ -1,6 +1,7 @@
 module.exports = function(app, passport) {
     var Contact = require('./models/contact');
     var Team = require('./models/team');
+    var Comment = require('./models/comment');
 
     app.get('/', function(req, res) {
         res.render('index.ejs'); // load the index.ejs file
@@ -21,7 +22,22 @@ module.exports = function(app, passport) {
     });
 
     app.get('/services', function(req, res) {
-      res.render('services.ejs');
+      Comment.find({}, function(err, comments) {
+        res.render('services.ejs', {
+          comments: comments
+        });
+      });
+    });
+
+    app.post('/services', function(req, res) {
+      var newComment = new Comment();
+      newComment.name = req.body.name;
+      newComment.subject = req.body.subject;
+      newComment.message = req.body.message;
+      newComment.isApproved = false;
+      newComment.save(function(err) {
+        if (err) throw err;
+      });
     });
 
     app.get('/contact', function(req, res) {
