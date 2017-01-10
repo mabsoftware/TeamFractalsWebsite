@@ -34,7 +34,7 @@ module.exports = function(app, passport) {
       newComment.name = req.body.name;
       newComment.subject = req.body.subject;
       newComment.message = req.body.message;
-      newComment.isApproved = false;
+      newComment.isApproved = true;
       newComment.save(function(err) {
         if (err) throw err;
       });
