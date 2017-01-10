@@ -35,9 +35,11 @@ module.exports = function(app, passport) {
       newComment.subject = req.body.subject;
       newComment.message = req.body.message;
       newComment.isApproved = true;
+      console.log(newComment);
       newComment.save(function(err) {
         if (err) throw err;
       });
+      res.redirect("/services");
     });
 
     app.get('/contact', function(req, res) {
