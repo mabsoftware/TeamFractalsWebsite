@@ -21,12 +21,12 @@
           <li>Conclusion</li>
         </ol>
         <h3>Comments</h3>
-        <ul style="text-align: left; list-type: undecorated;">
+        <ul style="text-align: left; list-style: none;">
           <% for (var i = 0; i < comments.length; i++) { %>
             <% if (comments[i]["isApproved"]) { %>
               <li>
                 <div class="well">
-                  <p><strong><%= comments[i]["name"] %> / <%= comments[i]["subject"] %></strong>:
+                  <p><strong><%= comments[i]["name"] %> - <%= comments[i]["subject"] %></strong>:
                   <%= comments[i]["message"] %></p>
                 </div>
               </li>
