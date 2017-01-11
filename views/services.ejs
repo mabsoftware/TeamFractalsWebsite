@@ -13,7 +13,7 @@
           form or at <a href="mailto:team.fractal.ftc@gmail.com">
             team.fractal.ftc@gmail.com.</a></p>
         <h3>Planned Tutorials</h3>
-        <ol style="text-align: left;">
+        <ol style="text-align: left; list-type: undecorated;">
           <li>Basic Electronics</li>
           <li>Types of Motors</li>
           <li>Basic Drive Program in Android Studio</li>
@@ -25,8 +25,7 @@
           <% for (var i = 0; i < comments.length; i++) { %>
             <% if (comments[i]["isApproved"]) { %>
               <li>
-                <p><strong><%= comments[i]["name"] %></strong></p>
-                <p><strong><%= comments[i]["subject"] %></strong></p>
+                <p><strong><%= comments[i]["name"] %> / <%= comments[i]["subject"] %></strong></p>
                 <p><%= comments[i]["message"] %></p>
               </li>
             <% } %>
