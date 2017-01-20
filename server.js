@@ -10,6 +10,7 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var database = require('./config/database.js');
 var path = require('path');
+var helmet = require('helmet');
 var colors = require('colors');
 
 mongoose.connect(database.url); // connect to db
@@ -27,7 +28,8 @@ app.set('views', './views');
 app.use(session({ secret: 'a;sldkfasdi283423a;sl134' })); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
-app.use(flash()); // use connect-flash for flash messages stored in session
+app.use(flash());
+app.use(helmet());
 
 require('./app/routes.js')(app, passport);
 
