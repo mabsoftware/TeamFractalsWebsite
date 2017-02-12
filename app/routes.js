@@ -21,9 +21,9 @@ module.exports = function(app, passport) {
       res.render('news.ejs');
     });
 
-    app.get('/services', function(req, res) {
+    app.get('/tutorials', function(req, res) {
       Comment.find({}, function(err, comments) {
-        res.render('services.ejs', {
+        res.render('tutorials.ejs', {
           comments: comments
         });
       });
