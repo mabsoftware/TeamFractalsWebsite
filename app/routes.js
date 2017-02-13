@@ -29,7 +29,7 @@ module.exports = function(app, passport) {
       });
     });
 
-    app.post('/services', function(req, res) {
+    app.post('/tutorials', function(req, res) {
       var newComment = new Comment();
       newComment.name = req.body.name;
       newComment.subject = req.body.subject;
@@ -39,7 +39,7 @@ module.exports = function(app, passport) {
       newComment.save(function(err) {
         if (err) throw err;
       });
-      res.redirect("/services");
+      res.redirect("/tutorials");
     });
 
     app.get('/contact', function(req, res) {
